@@ -368,7 +368,7 @@ async function main() {
           "24/7 concierge",
         ]),
         images: JSON.stringify([
-          "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=900&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&auto=format&fit=crop",
           "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=900&auto=format&fit=crop",
           "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=900&auto=format&fit=crop",
         ]),
