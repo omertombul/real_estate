@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Listing {
+  id            String  @id
+  mlsNumber     String
+  address       String
+  neighborhood  String
+  city          String
+  price         Int
+  priceReduced  Boolean @default(false)
+  previousPrice Int?
+  type          String
+  status        String
+  isNew         Boolean @default(false)
+  beds          Int
+  baths         Int
+  sqft          Int
+  parking       Int
+  yearBuilt     Int
+  condoFees     Int?
+  taxes         Int
+  description   String
+  features      String
+  images        String
+  listedDate    String
+}
+
+model BlogPost {
+  id         Int    @id @default(autoincrement())
+  slug       String @unique
+  titleEn    String
+  titleFr    String
+  excerptEn  String
+  excerptFr  String
+  bodyEn     String
+  bodyFr     String
+  categoryEn String
+  categoryFr String
+  image      String
+  date       String
+  readTime   Int
+}
