@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { Heart, Menu, Phone } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
@@ -14,6 +15,7 @@ export function Navbar() {
   const pathname = usePathname();
   const { savedIds, mounted } = useSavedListings();
   const { lang, setLang, t } = useLanguage();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const NAV_LINKS = [
     { href: "/listings", label: t.nav.listings },
@@ -131,19 +133,20 @@ export function Navbar() {
           {/* Mobile */}
           <div className="flex items-center gap-3 md:hidden">
             <LangToggle />
-            <Sheet>
+            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger render={<button className="p-2 -mr-2 text-foreground" aria-label="Menu" />}>
                 <Menu className="h-5 w-5" />
               </SheetTrigger>
               <SheetContent side="right" className="w-64 bg-background">
                 <div className="mt-10 flex flex-col gap-6 px-2">
-                  <Link href="/" className="font-display text-base font-semibold">
+                  <Link href="/" onClick={() => setMobileOpen(false)} className="font-display text-base font-semibold">
                     {t.nav.home}
                   </Link>
                   {NAV_LINKS.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
+                      onClick={() => setMobileOpen(false)}
                       className="text-sm uppercase tracking-[0.15em] font-medium text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {link.label}
@@ -151,6 +154,7 @@ export function Navbar() {
                   ))}
                   <Link
                     href="/saved"
+                    onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-2 text-sm uppercase tracking-[0.15em] font-medium text-muted-foreground"
                   >
                     <Heart className="h-4 w-4" />
