@@ -124,7 +124,7 @@ export function BuyContent() {
       </section>
 
       {/* ── THE BUYING PROCESS ── */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <span className="inline-flex items-center gap-2 justify-center text-primary text-xs font-bold uppercase tracking-[0.2em] mb-3">

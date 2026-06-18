@@ -105,7 +105,7 @@ export function SellContent() {
       </section>
 
       {/* ── WHY SELL WITH TERESA ── */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-2 justify-center text-primary text-xs font-bold uppercase tracking-[0.2em] mb-3">
@@ -122,7 +122,7 @@ export function SellContent() {
               return (
                 <div
                   key={b.title}
-                  className="bg-muted/40 rounded-2xl p-6 border border-border/50 flex flex-col gap-4 hover:shadow-md transition-shadow"
+                  className="bg-secondary p-6 border border-border flex flex-col gap-4 hover:border-primary/50 transition-colors"
                 >
                   <div className="h-11 w-11 rounded-xl bg-primary/10 flex items-center justify-center">
                     <Icon className="h-5 w-5 text-primary" />
@@ -181,7 +181,7 @@ export function SellContent() {
       </section>
 
       {/* ── SELLER TESTIMONIALS ── */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-2 justify-center text-primary text-xs font-bold uppercase tracking-[0.2em] mb-3">
@@ -277,7 +277,7 @@ export function SellContent() {
       </section>
 
       {/* ── CROSS-SELL ── */}
-      <section className="py-14 px-4 sm:px-6 lg:px-8 border-t bg-white">
+      <section className="py-14 px-4 sm:px-6 lg:px-8 border-t bg-card">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-muted-foreground text-sm mb-4">{ts.crossSell.sub}</p>
           <div className="flex flex-wrap gap-3 justify-center">
